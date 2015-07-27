@@ -3,11 +3,9 @@ var jobs = {};
 var result = {};
 
 // =========== [ jobs.index() ] ===========
-jobs.test = co.wrap(function*() {
+jobs.start = co.wrap(function*() {
     try {
-      console.log("hello dm-util");
-
-
+        console.log("hello dm-util");
     } catch (e) {
         console.log("Filename: ", __filename, "\n", e.stack);
     }
