@@ -3,8 +3,9 @@ var jobs = {};
 var result = {};
 
 // =========== [ jobs.index() ] ===========
-jobs.index = co.wrap(function*() {
+jobs.test = co.wrap(function*() {
     try {
+      console.log("hello dm-util");
 
 
     } catch (e) {
