@@ -11,19 +11,19 @@
 7 silly cache add   rawSpec: '.',
 7 silly cache add   spec: '/home/mod/code/dm/util',
 7 silly cache add   type: 'directory' }
-8 verbose addLocalDirectory /home/mod/.npm/dm-util/0.0.1/package.tgz not in flight; packing
-9 verbose tar pack [ '/home/mod/.npm/dm-util/0.0.1/package.tgz',
+8 verbose addLocalDirectory /home/mod/.npm/dm-util/0.0.3/package.tgz not in flight; packing
+9 verbose tar pack [ '/home/mod/.npm/dm-util/0.0.3/package.tgz',
 9 verbose tar pack   '/home/mod/code/dm/util' ]
-10 verbose tarball /home/mod/.npm/dm-util/0.0.1/package.tgz
+10 verbose tarball /home/mod/.npm/dm-util/0.0.3/package.tgz
 11 verbose folder /home/mod/code/dm/util
-12 info prepublish dm-util@0.0.1
-13 verbose addLocalTarball adding from inside cache /home/mod/.npm/dm-util/0.0.1/package.tgz
-14 silly cache afterAdd dm-util@0.0.1
-15 verbose afterAdd /home/mod/.npm/dm-util/0.0.1/package/package.json not in flight; writing
-16 verbose afterAdd /home/mod/.npm/dm-util/0.0.1/package/package.json written
+12 info prepublish dm-util@0.0.3
+13 verbose addLocalTarball adding from inside cache /home/mod/.npm/dm-util/0.0.3/package.tgz
+14 silly cache afterAdd dm-util@0.0.3
+15 verbose afterAdd /home/mod/.npm/dm-util/0.0.3/package/package.json not in flight; writing
+16 verbose afterAdd /home/mod/.npm/dm-util/0.0.3/package/package.json written
 17 silly publish { private: false,
 17 silly publish   name: 'dm-util',
-17 silly publish   version: '0.0.1',
+17 silly publish   version: '0.0.3',
 17 silly publish   description: '* Shortcut: dmu',
 17 silly publish   main: 'index.js',
 17 silly publish   scripts:
@@ -50,56 +50,95 @@
 17 silly publish   bin: { dmu: './bin/dm-util', 'dm-util': './bin/dm-util' },
 17 silly publish   readme: '# dm-util\n* Shortcut: dmu\n',
 17 silly publish   readmeFilename: 'README.md',
-17 silly publish   gitHead: '228e1bb98099dd3ebb3e03481819866775cdd75b',
-17 silly publish   _id: 'dm-util@0.0.1',
-17 silly publish   _shasum: 'f7ea2a8a5dfc295744ca3d6e29482a06eeb1de52',
+17 silly publish   gitHead: 'c223b09c27db49d9ef7b816ceaa0173388528893',
+17 silly publish   _id: 'dm-util@0.0.3',
+17 silly publish   _shasum: '0ca9449d0d88a080266ae7487131abded11908d6',
 17 silly publish   _from: '.' }
 18 silly mapToRegistry name dm-util
 19 silly mapToRegistry using default registry
 20 silly mapToRegistry registry https://registry.npmjs.org/
 21 silly mapToRegistry uri https://registry.npmjs.org/dm-util
 22 verbose publish registryBase https://registry.npmjs.org/
-23 silly publish uploading /home/mod/.npm/dm-util/0.0.1/package.tgz
+23 silly publish uploading /home/mod/.npm/dm-util/0.0.3/package.tgz
 24 verbose request uri https://registry.npmjs.org/dm-util
 25 verbose request sending authorization for write operation
-26 info attempt registry request try #1 at 6:32:57 PM
+26 info attempt registry request try #1 at 6:33:42 PM
 27 verbose request using bearer token for auth
-28 verbose request id 7ecb20eb2cee2005
+28 verbose request id 7d679b856faa5915
 29 http request PUT https://registry.npmjs.org/dm-util
-30 http 403 https://registry.npmjs.org/dm-util
-31 verbose headers { 'content-type': 'application/json',
-31 verbose headers   'cache-control': 'max-age=60',
-31 verbose headers   'content-length': '95',
-31 verbose headers   'accept-ranges': 'bytes',
-31 verbose headers   date: 'Mon, 27 Jul 2015 16:32:58 GMT',
-31 verbose headers   via: '1.1 varnish',
-31 verbose headers   connection: 'keep-alive',
-31 verbose headers   'x-served-by': 'cache-fra1240-FRA',
-31 verbose headers   'x-cache': 'MISS',
-31 verbose headers   'x-cache-hits': '0',
-31 verbose headers   'x-timer': 'S1438014777.844936,VS0,VE674' }
-32 verbose request invalidating /home/mod/.npm/registry.npmjs.org/dm-util on PUT
-33 error publish Failed PUT 403
-34 verbose stack Error: "You cannot publish over the previously published version 0.0.1." : dm-util
-34 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:254:14)
-34 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:178:14)
-34 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:344:22)
-34 verbose stack     at Request.emit (events.js:110:17)
-34 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1239:14)
-34 verbose stack     at Request.emit (events.js:129:20)
-34 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1187:12)
-34 verbose stack     at IncomingMessage.emit (events.js:129:20)
-34 verbose stack     at _stream_readable.js:908:16
-34 verbose stack     at process._tickCallback (node.js:355:11)
-35 verbose statusCode 403
-36 verbose pkgid dm-util
-37 verbose cwd /home/mod/code/dm/util
-38 error Linux 3.16.0-41-generic
-39 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "publish"
-40 error node v0.12.0
-41 error npm  v2.5.1
-42 error code E403
-43 error "You cannot publish over the previously published version 0.0.1." : dm-util
-44 error If you need help, you may report this error at:
-44 error     <http://github.com/npm/npm/issues>
-45 verbose exit [ 1, true ]
+30 http 503 https://registry.npmjs.org/dm-util
+31 verbose bad json <?xml version="1.0" encoding="utf-8"?>
+31 verbose bad json <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+31 verbose bad json  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+31 verbose bad json <html>
+31 verbose bad json   <head>
+31 verbose bad json     <title>503 backend read error</title>
+31 verbose bad json   </head>
+31 verbose bad json   <body>
+31 verbose bad json     <h1>Error 503 backend read error</h1>
+31 verbose bad json     <p>backend read error</p>
+31 verbose bad json     <h3>Guru Mediation:</h3>
+31 verbose bad json     <p>Details: cache-fra1236-FRA 1438014838 3739688278</p>
+31 verbose bad json     <hr>
+31 verbose bad json     <p>Varnish cache server</p>
+31 verbose bad json   </body>
+31 verbose bad json </html>
+32 error registry error parsing json
+33 info retry will retry, error on last attempt: SyntaxError: Unexpected token <
+33 info retry
+33 info retry <?xml version="1.0" encoding="utf-8"?>
+33 info retry <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+33 info retry  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+33 info retry <html>
+33 info retry   <head>
+33 info retry     <title>503 backend read error</title>
+33 info retry   </head>
+33 info retry   <body>
+33 info retry     <h1>Error 503 backend read error</h1>
+33 info retry     <p>backend read error</p>
+33 info retry     <h3>Guru Mediation:</h3>
+33 info retry     <p>Details: cache-fra1236-FRA 1438014838 3739688278</p>
+33 info retry     <hr>
+33 info retry     <p>Varnish cache server</p>
+33 info retry   </body>
+33 info retry </html>
+34 info attempt registry request try #2 at 6:34:07 PM
+35 verbose request using bearer token for auth
+36 http request PUT https://registry.npmjs.org/dm-util
+37 http 403 https://registry.npmjs.org/dm-util
+38 verbose headers { 'content-type': 'application/json',
+38 verbose headers   'cache-control': 'max-age=60',
+38 verbose headers   'content-length': '95',
+38 verbose headers   'accept-ranges': 'bytes',
+38 verbose headers   date: 'Mon, 27 Jul 2015 16:34:09 GMT',
+38 verbose headers   via: '1.1 varnish',
+38 verbose headers   connection: 'keep-alive',
+38 verbose headers   'x-served-by': 'cache-fra1225-FRA',
+38 verbose headers   'x-cache': 'MISS',
+38 verbose headers   'x-cache-hits': '0',
+38 verbose headers   'x-timer': 'S1438014848.641216,VS0,VE1019' }
+39 verbose request invalidating /home/mod/.npm/registry.npmjs.org/dm-util on PUT
+40 error publish Failed PUT 403
+41 verbose stack Error: "You cannot publish over the previously published version 0.0.3." : dm-util
+41 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:254:14)
+41 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:178:14)
+41 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:344:22)
+41 verbose stack     at Request.emit (events.js:110:17)
+41 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1239:14)
+41 verbose stack     at Request.emit (events.js:129:20)
+41 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1187:12)
+41 verbose stack     at IncomingMessage.emit (events.js:129:20)
+41 verbose stack     at _stream_readable.js:908:16
+41 verbose stack     at process._tickCallback (node.js:355:11)
+42 verbose statusCode 403
+43 verbose pkgid dm-util
+44 verbose cwd /home/mod/code/dm/util
+45 error Linux 3.16.0-41-generic
+46 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "publish"
+47 error node v0.12.0
+48 error npm  v2.5.1
+49 error code E403
+50 error "You cannot publish over the previously published version 0.0.3." : dm-util
+51 error If you need help, you may report this error at:
+51 error     <http://github.com/npm/npm/issues>
+52 verbose exit [ 1, true ]
