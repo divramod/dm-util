@@ -18,12 +18,12 @@ Some helpers i need in my daily work with npm modules.
 var dmUtil = require("dm-util");
 // create task
 var configTask = {
-    templatePath: 'pathToTemplateFolder',
-    targetPath: 'pathToTarget',
-    deleteBefore: true,
+    templatePath: 'pathToTemplateFolder', // mandatory
+    targetPath: 'pathToTarget', // mandatory
+    deleteBefore: true, // optional default false
     overwrite: true, // [true, false, "ask"]
     rename: ["files", "dirs"], // renames files at first and dirs after that
-    replace: [{
+    replace: [{ // mandatory: used for replacing strings in files, file names and directory names
         search: "TASKNAME",
         replace: taskName
     }, {
@@ -33,7 +33,7 @@ var configTask = {
         search: "blub",
         replace: "blablub"
     }],
-    messages: {
+    messages: { // optional
         success: "Task successful!",
         error: "Task not successful!""
     }
