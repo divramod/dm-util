@@ -26,22 +26,25 @@ job.start = co.wrap(function*(config) {
         // =========== [ overwrite ] ===========
         if (config.overwrite === true) {
             // =========== [ delete ] ===========
-            if (config.deleteBefore || false) {
-                var count = (config.targetPath.match(/\//g) || []).length;
-                // =========== [ safety for not removing something falsly ] ===========
-                if (count > 3) {
-                    var deleteFolderAnswer =
-                        yield dmPrompt({
-                            type: "input",
-                            name: "deleteFolder",
-                            message: "You are going to delete the folder " + config.targetPath.red + " Are you sure?: [Yes]"
-                        });
-                    var deleteFolder = deleteFolderAnswer.deleteFolder;
-                    if (deleteFolder === "Yes") {
-                        rm("-rf", config.targetPath);
+            if (config.deleteBefore) {
+                if (config.deleteBefore === true && test("-d", config.targetPath)) {
+                    var count = (config.targetPath.match(/\//g) || []).length;
+                    // =========== [ safety for not removing something falsly ] ===========
+                    if (count > 3) {
+                        var deleteFolderAnswer =
+                            yield dmPrompt({
+                                type: "input",
+                                name: "deleteFolder",
+                                message: "You are going to delete the folder " + config.targetPath.red + " Are you sure?: [Yes]"
+                            });
+                        var deleteFolder = deleteFolderAnswer.deleteFolder;
+                        if (deleteFolder === "Yes") {
+                            rm("-rf", config.targetPath);
+                        }
                     }
                 }
             }
+
             // =========== [ create ] ===========
             mkdir("-p", config.targetPath);
             cp('-Rf', config.templatePath + "/*", config.targetPath);
