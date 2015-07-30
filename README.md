@@ -15,11 +15,15 @@ Some helpers i need in my daily work with npm modules.
 ### cpTemplate(config)
 
 Copies a template directory structure, replaces placeholders, renames files and directories.
-
+Work Order:
+- replace strings in files
+- rename files
+- rename directories
 
 ```
 var dmUtil = require("dm-util");
-// create task
+
+// configure the task
 var configTask = {
     templatePath: 'pathToTemplateFolder', // mandatory
     targetPath: 'pathToTarget', // mandatory
@@ -41,5 +45,6 @@ var configTask = {
         error: "Task not successful!""
     }
 };
+
 dmUtil.cpTemplate(configTask);
 ```
