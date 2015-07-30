@@ -1,6 +1,7 @@
-# dm-util
+# Shortcuts
 
-* Shortcut: dmu
+    dmu
+    dm-util
 
 ## description
 Some helpers i need in my daily work with npm modules.
@@ -10,6 +11,8 @@ Some helpers i need in my daily work with npm modules.
     npm install dm-util --save
 
 ## usage
+
+### cpTemplate(config)
 
 ```
 var dmUtil = require("dm-util");
