@@ -5,7 +5,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --harmony --require co-mocha --watch --reporter landing",
+    "test": "mocha --harmony --require co-mocha --watch --reporter landing jobs/**/*",
     "start": "node --harmony ./bin/dm-util"
   },
   "repository": {
