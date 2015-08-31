@@ -48,3 +48,32 @@ var configTask = {
 
 dmUtil.cpTemplate(configTask);
 ```
+
+# dm-util
+
+## Description
+*
+
+## Run
+```
+dmu [yml]
+dm-util [yml]
+```
+
+## Install
+
+```
+npm install dm-util -g
+```
+
+## Tasks
+
+## Config
+* you can place a .dm-util.json file in your home directory (~/.dm-util.json)
+* the following things are allowed at the moment
+```javascript
+{
+}
+```
+
+## Lessons Learned

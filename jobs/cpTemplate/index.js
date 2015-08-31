@@ -105,6 +105,7 @@ job.start = co.wrap(function*(config) {
     } catch (e) {
         console.log("Filename: ", __filename, "\n", e.stack);
     }
+    return yield Promise.resolve();
 }); // job.start()
 
 // =========== [ MODULE EXPORT ] ===========

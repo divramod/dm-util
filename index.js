@@ -1,7 +1,11 @@
-var jobs = {};
+var tasks = {};
 
-jobs.cpTemplate = require("./jobs/cpTemplate/index.js").start;
-jobs.pathGet = require("./jobs/pathGet/index.js");
-jobs.getJsonFromFile = require("./jobs/getJsonFromFile/index.js").start;
+// example
+tasks.test = require("./tasks/test/index.js").start;
+tasks.cpTemplate = require("./jobs/cpTemplate/index.js").start;
+tasks.pathGet = require("./jobs/pathGet/index.js");
+tasks.getJsonFromFile = require("./jobs/getJsonFromFile/index.js").start;
 
-module.exports = jobs;
+// automatically add tasks here
+
+module.exports = tasks;
