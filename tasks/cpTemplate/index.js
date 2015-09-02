@@ -4,10 +4,10 @@ var dmPrompt = require("dm-prompt").Inquirer;
 var colors = require("colors");
 
 // =========== [ MODULE DEFINE ] ===========
-var job = {};
+var task = {};
 
-// =========== [ job.start() ] ===========
-job.start = co.wrap(function*(config) {
+// =========== [ task.start() ] ===========
+task.start = co.wrap(function*(config) {
     try {
         // =========== [ proof if existent ] ===========
         if (test("-d", config.targetPath) && config.overwrite === "ask") {
@@ -106,7 +106,7 @@ job.start = co.wrap(function*(config) {
         console.log("Filename: ", __filename, "\n", e.stack);
     }
     return yield Promise.resolve();
-}); // job.start()
+}); // task.start()
 
 // =========== [ MODULE EXPORT ] ===========
-module.exports = job;
+module.exports = task;

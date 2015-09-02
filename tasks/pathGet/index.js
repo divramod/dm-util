@@ -5,25 +5,25 @@ var dmPrompt = require("dm-prompt").Inquirer;
 require("shelljs/global");
 
 // =========== [ MODULE DEFINE ] ===========
-var job = {};
+var task = {};
 
-// =========== [ job.current ] ===========
-job.current = function() {
+// =========== [ task.current ] ===========
+task.current = function() {
     return process.cwd();
-}; // job.current
+}; // task.current
 
-// =========== [ job.global ] ===========
-job.global = function() {
+// =========== [ task.global ] ===========
+task.global = function() {
     return path.join(path.dirname(require.main.filename), "..");
-}; // job.global
+}; // task.global
 
-// =========== [ job.home ] ===========
-job.home = function() {
+// =========== [ task.home ] ===========
+task.home = function() {
     return env["HOME"];
-}; // job.global
+}; // task.global
 
-// =========== [ job.inputOne ] ===========
-job.inputOne = co.wrap(function*() {
+// =========== [ task.inputOne ] ===========
+task.inputOne = co.wrap(function*() {
     var inputOnePathAnswer =
         yield dmPrompt({
             type: "inputOne",
@@ -33,13 +33,13 @@ job.inputOne = co.wrap(function*() {
     var inputOnePath = inputOnePathAnswer.inputOnePath;
 
     return yield Promise.resolve(inputOnePath);
-}); // job.inputOne
+}); // task.inputOne
 
-// =========== [ job.inputMany ] ===========
+// =========== [ task.inputMany ] ===========
 // TODO
-job.inputMany = co.wrap(function*() {
+task.inputMany = co.wrap(function*() {
   return yield Promise.resolve();
-}); // job.inputMany
+}); // task.inputMany
 
 // =========== [ MODULE EXPORT ] ===========
-module.exports = job;
+module.exports = task;

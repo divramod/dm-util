@@ -5,10 +5,10 @@ var fs = require("fs");
 require("shelljs/global");
 
 // =========== [ MODULE DEFINE ] ===========
-var job = {};
+var task = {};
 
-// =========== [ job.start() ] ===========
-job.start = function(path) {
+// =========== [ task.start() ] ===========
+task.start = function(path) {
     try {
         var path = dmPath.replace(path);
 
@@ -26,7 +26,7 @@ job.start = function(path) {
         console.log("Filename: ", __filename, "\n", e.stack);
     }
     return json;
-}; // job.start()
+}; // task.start()
 
 // =========== [ MODULE EXPORT ] ===========
-module.exports = job;
+module.exports = task;
